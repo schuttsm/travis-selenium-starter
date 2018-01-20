@@ -77,7 +77,7 @@ const runTestPackage = ((package_name, callback) => {
       if (code == 0)
         resolve();
       else
-        reject('wdio exited with code' + code);
+        reject('wdio exited with code: ' + code);
     });
   });
 });
