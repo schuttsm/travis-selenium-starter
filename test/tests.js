@@ -17,6 +17,6 @@ describe('wdio tests', function() {
   }));
 
   it('should hit the base url', wdio.wrap(function() {
-    browser.url('http://localhost:3000');
+    browser.url('http://www.google.com');
   }));
 });
