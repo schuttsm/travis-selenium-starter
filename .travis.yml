@@ -1,4 +1,6 @@
 language: node_js
+node_js:
+  - "stable"
 install:
   - npm install
   - ./node_modules/.bin/selenium_standalone install
