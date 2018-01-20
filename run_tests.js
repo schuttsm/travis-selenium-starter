@@ -50,7 +50,16 @@ const startServerProcess = () => {
 const startSelenium = () => {
   return new Promise((resolve, reject) => {
     console.log('starting selenium');
-    selenium.start({spawnOptions: {stdio: 'inherit'}}, (err, selenium_proc) => {
+    selenium.start({
+      drivers: {
+        chrome: {
+          // check for more recent versions of chrome driver here:
+          // https://chromedriver.storage.googleapis.com/index.html
+          version: '2.31',
+          arch: process.arch,
+          baseURL: 'https://chromedriver.storage.googleapis.com'
+        },
+      }, spawnOptions: {stdio: 'inherit'}}, (err, selenium_proc) => {
       if (err) {
         console.error('Error starting selenium: ');
         console.error(err);

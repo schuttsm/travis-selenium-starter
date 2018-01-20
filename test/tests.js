@@ -4,7 +4,7 @@ const chai = require('chai');
 describe('wdio tests', function() {
   var browser = wdio.getBrowser({
       desiredCapabilities: {
-          browserName: 'chrome'
+          browserName: 'firefox'
       }
   });
 
