@@ -73,7 +73,14 @@ const runTestPackage = ((package_name, callback) => {
     wdio_proc.on('error', function(data) {
       return reject(new Error(data.toString()));
     });
-    wdio_proc.on('close', resolve);
+    wdio_proc.on('close', function(code) {
+      console.log('closing' + code);
+      resolve();
+    });
+    wdio_proc.on('exit', (code) => {
+      console.log('exiting' + code);
+      resolve();
+    });
   });
 });
 
