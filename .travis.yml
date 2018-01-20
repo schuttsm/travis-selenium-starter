@@ -1,0 +1,5 @@
+language: node_js
+install:
+  - ./node_modules/.bin/selenium_standalone install
+script:
+  - npm test
