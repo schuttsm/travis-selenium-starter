@@ -3,6 +3,6 @@ node_js:
   - "stable"
 install:
   - npm install
-  - ./node_modules/.bin/selenium-standalone install
+  - ./node_modules/.bin/selenium-standalone install --config=./selenium-standalone-config.js
 script:
   - npm test
